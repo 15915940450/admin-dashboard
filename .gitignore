@@ -1,3 +1,13 @@
+/online
+
+!/dist
+/dist/*
+!/dist/*.html
+
+
+
+
+#============================================
 # Logs
 logs
 *.log
@@ -56,4 +66,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
