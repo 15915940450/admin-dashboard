@@ -1,0 +1,18 @@
+<section *ngIf="hero">
+<h2>{{hero.name | uppercase}} 詳情</h2>
+<div>
+  <span>
+    id:
+    <span>
+      {{hero.id}}
+    </span>
+  </span>
+</div>
+<div>
+  <label>
+    name:
+    <input [(ngModel)]="hero.name" placeholder="輸入一個名字" />
+  </label>
+</div>
+</section>
+
