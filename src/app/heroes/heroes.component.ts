@@ -27,7 +27,7 @@ export class HeroesComponent implements OnInit {
     this.selectedHero=hero;
   };
 
-  getHeroes():vold{
+  getHeroes():void{
     this.heroes=this.heroService.getHeroes();
   }
 
