@@ -1,22 +1,3 @@
-/email-templates/
-/plugins/
-# /TEST/
-/test.html
-/test.css
-/test.js
-/test.php
-/test.vue
-/tmp.php
-/tmp.vue
-*.sublime-workspace
-/batterystation
-/ccbike
-/TEST
-
-.DS_Store
-
-
-# ==========================================================
 # Logs
 logs
 *.log
@@ -43,19 +24,19 @@ coverage
 .grunt
 
 # Bower dependency directory (https://bower.io/)
-#bower_components
+bower_components
 
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
+# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
-# Typescript v1 declaration files
+# TypeScript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -75,3 +56,20 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# ===ili==========================================================
