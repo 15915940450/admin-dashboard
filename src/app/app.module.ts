@@ -1,4 +1,7 @@
 import {AppComponent} from './app.component';
+import { LoginComponent } from './login/login.component';
+import { IndexComponent } from './index/index.component';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 import {CdkTableModule} from '@angular/cdk/table';
@@ -6,6 +9,7 @@ import {CdkTreeModule} from '@angular/cdk/tree';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
 import {
   MatAutocompleteModule,
@@ -42,12 +46,21 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule,
+  MatTreeModule
 } from '@angular/material';
 
 
 @NgModule({
-  exports: [
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    IndexComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
     CdkTableModule,
     CdkTreeModule,
     MatAutocompleteModule,
@@ -85,24 +98,21 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-  ]
-})
-export class MaterialModule {}
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    MaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    RouterModule.forRoot([
+      {
+        path:'',
+        redirectTo:'/index',
+        pathMatch:'full'
+      },
+      {
+        path:'index',
+        component:IndexComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {};
