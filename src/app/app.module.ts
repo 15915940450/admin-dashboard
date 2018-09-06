@@ -8,6 +8,7 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { MyserviceService } from './myservice.service';
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 
@@ -112,7 +113,9 @@ import {
       }
     ])
   ],
-  providers: [],
+  providers: [
+    MyserviceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {};
