@@ -34,7 +34,7 @@ var myRouteConfig=[
     imports: [
       RouterModule.forRoot(
         myRouteConfig,
-        { enableTracing: true } // <-- debugging purposes only
+        { enableTracing: false } // <-- debugging purposes only
       )
     ],
     exports: [
