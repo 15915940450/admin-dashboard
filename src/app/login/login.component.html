@@ -1,3 +1,9 @@
-<p>
-  login works!
-</p>
+<form (ngSubmit)="onClickSubmit(formdata.value)" [formGroup]="formdata">
+  <p>
+    <input type="text" name="emailid" formControlName="emailid" placeholder="請輸入您的郵箱" />
+  </p>
+  <p>
+    <input type="password" name="mima" formControlName="mima" placeholder="請鍵入你的密碼" />
+  </p>
+  <input type="submit" value="submit" [disabled]="!formdata.valid" />
+</form>
