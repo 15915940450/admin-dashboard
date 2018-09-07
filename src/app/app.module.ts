@@ -6,7 +6,6 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { MyserviceService } from './myservice.service';
 import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
 
 import {
   MatAutocompleteModule,
@@ -46,35 +45,13 @@ import {
   MatTreeModule
 } from '@angular/material';
 
+import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import { LoginComponent } from './login/login.component';
 import { IndexComponent } from './index/index.component';
 import { BussinessComponent } from './bussiness/bussiness.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 
-var myRouteConfig=[
-  // {
-  //   path:'',
-  //   redirectTo:'/index',
-  //   pathMatch:'full'
-  // },
-  {
-    path:'login',
-    component:LoginComponent
-  },
-  {
-    path:'index',
-    component:IndexComponent
-  },
-  {
-    path:'bussiness',
-    component:BussinessComponent
-  },
-  {
-    path:'**',
-    component:NotfoundComponent
-  }
-];
 
 
 
@@ -130,7 +107,7 @@ var myRouteConfig=[
     MatTreeModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(myRouteConfig) //,{ enableTracing: true }
+    AppRoutingModule
   ],
   providers: [
     MyserviceService
