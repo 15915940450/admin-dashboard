@@ -2,6 +2,18 @@ import {AppComponent} from './app.component';
 import { LoginComponent } from './login/login.component';
 import { IndexComponent } from './index/index.component';
 
+var myRouteConfig=[
+  {
+    path:'',
+    redirectTo:'/index',
+    pathMatch:'full'
+  },
+  {
+    path:'index',
+    component:IndexComponent
+  }
+];
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 import {CdkTableModule} from '@angular/cdk/table';
@@ -101,17 +113,7 @@ import {
     MatTreeModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      {
-        path:'',
-        redirectTo:'/index',
-        pathMatch:'full'
-      },
-      {
-        path:'index',
-        component:IndexComponent
-      }
-    ])
+    RouterModule.forRoot(myRouteConfig)
   ],
   providers: [
     MyserviceService
