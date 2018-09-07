@@ -1,4 +1,25 @@
-<router-outlet></router-outlet>
-{{SiKan}}
+<h3>{{SiKan}}</h3>
 
-<app-login></app-login>
+<hr />
+
+  
+<nav>
+    <ul class="nav">
+        <li>
+            <a routerLink="/index" routerLinkActive="active">首頁</a>
+        </li>
+        <li>
+            <a routerLink="/bussiness" routerLinkActive="active">數據</a>
+        </li>
+        <li>
+            <a routerLink="/login" routerLinkActive="active">登錄</a>
+        </li>
+        <li>
+            <a routerLink="/notfound" routerLinkActive="active">沒找到404</a>
+        </li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>
+<!-- <app-login></app-login> -->
+

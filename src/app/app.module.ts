@@ -1,19 +1,3 @@
-import {AppComponent} from './app.component';
-import { LoginComponent } from './login/login.component';
-import { IndexComponent } from './index/index.component';
-
-var myRouteConfig=[
-  {
-    path:'',
-    redirectTo:'/index',
-    pathMatch:'full'
-  },
-  {
-    path:'index',
-    component:IndexComponent
-  }
-];
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 import {CdkTableModule} from '@angular/cdk/table';
@@ -62,12 +46,45 @@ import {
   MatTreeModule
 } from '@angular/material';
 
+import {AppComponent} from './app.component';
+import { LoginComponent } from './login/login.component';
+import { IndexComponent } from './index/index.component';
+import { BussinessComponent } from './bussiness/bussiness.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+
+var myRouteConfig=[
+  // {
+  //   path:'',
+  //   redirectTo:'/index',
+  //   pathMatch:'full'
+  // },
+  {
+    path:'login',
+    component:LoginComponent
+  },
+  {
+    path:'index',
+    component:IndexComponent
+  },
+  {
+    path:'bussiness',
+    component:BussinessComponent
+  },
+  {
+    path:'**',
+    component:NotfoundComponent
+  }
+];
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    IndexComponent
+    IndexComponent,
+    BussinessComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -113,7 +130,7 @@ import {
     MatTreeModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(myRouteConfig)
+    RouterModule.forRoot(myRouteConfig) //,{ enableTracing: true }
   ],
   providers: [
     MyserviceService
