@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { IndexComponent } from './index/index.component';
 import { BussinessComponent } from './bussiness/bussiness.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import {AuthGuard} from './auth-guard.service';
 
 var myRouteConfig=[
     {
@@ -18,10 +19,12 @@ var myRouteConfig=[
     },
     {
       path:'index',
+      canActivate: [AuthGuard],
       component:IndexComponent
     },
     {
       path:'bussiness',
+      canActivate: [AuthGuard],
       component:BussinessComponent
     },
     {

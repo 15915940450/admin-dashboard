@@ -6,6 +6,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { MyserviceService } from './myservice.service';
 import {NgModule} from '@angular/core';
+import {AuthGuard} from './auth-guard.service';
 
 import {
   MatAutocompleteModule,
@@ -110,7 +111,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     AppRoutingModule
   ],
   providers: [
-    MyserviceService
+    MyserviceService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
