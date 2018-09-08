@@ -1,8 +1,10 @@
 import _ from './lodash.ili.js';
 
-var rqs=function(urlMethod,success,paramSettings,handle1050){
-    var handle1050=handle1050 || function(){
-        window.location.href='http://localhost:40450/login';
+var rqs=function(urlMethod,success,paramSettings){
+    var ngThis=this;
+    var handle1050=function(){
+        // window.location.href='http://localhost:40450/login';
+        ngThis.router.navigate(['/login']);
     };
     var token=window.localStorage.token;
     var settings={

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 import rqs from '../rqs.js';
 import api from '../api.js';
 
@@ -9,12 +10,14 @@ import api from '../api.js';
 })
 export class BussinessComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
   data;
+  rqs;
   
 
   ngOnInit() {
     this.data='藕斷絲連';
+    this.rqs=rqs;
     
     this.getData();
   }
@@ -22,7 +25,7 @@ export class BussinessComponent implements OnInit {
     var sendData={
       date:1536319838000
     };
-    rqs(api.commerceInfo,function(objRps){
+    this.rqs(api.commerceInfo,function(objRps){
       console.log(objRps);
     },{
       objSendData:sendData
