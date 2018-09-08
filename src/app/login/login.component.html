@@ -1,4 +1,8 @@
-<form (ngSubmit)="onClickSubmit(formdata.value)" [formGroup]="formdata">
+<form 
+  (ngSubmit)="onClickSubmit(formdata.value)" 
+  [formGroup]="formdata"
+  class="form_login"
+  >
   <p>
     <input type="text" name="emailid" formControlName="emailid" placeholder="請輸入您的郵箱" />
   </p>
