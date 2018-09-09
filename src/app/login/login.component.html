@@ -1,25 +1,26 @@
-<!-- <form 
-  (ngSubmit)="onClickSubmit(formdata.value)" 
-  [formGroup]="formdata"
-  class="form_login"
-  >
-  <p>
-    <input type="text" name="emailid" formControlName="emailid" placeholder="請輸入您的郵箱" />
-  </p>
-  <p>
-    <input type="password" name="mima" formControlName="mima" placeholder="請鍵入你的密碼" />
-  </p>
-  <input type="submit" value="submit" [disabled]="!formdata.valid" />
-</form> -->
-
 <div class="login_wrap">
-  <form class="form_login">
+  <form 
+    class="form_login"
+    [formGroup]="formdata"
+    (ngSubmit)="login(formdata.value)"
+    >
     <mat-form-field>
-      <input matInput placeholder="請輸入您的手機號碼" required />
+      <input 
+        matInput 
+        placeholder="請輸入您的手機號碼" 
+        required 
+        formControlName="phone"
+        />
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="密碼" type="password" required />
+      <input 
+        matInput 
+        placeholder="密碼" 
+        type="password" 
+        required 
+        formCpntrolName="password"
+        />
     </mat-form-field>
 
 
