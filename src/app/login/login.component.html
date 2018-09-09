@@ -1,4 +1,4 @@
-<form 
+<!-- <form 
   (ngSubmit)="onClickSubmit(formdata.value)" 
   [formGroup]="formdata"
   class="form_login"
@@ -10,4 +10,21 @@
     <input type="password" name="mima" formControlName="mima" placeholder="請鍵入你的密碼" />
   </p>
   <input type="submit" value="submit" [disabled]="!formdata.valid" />
-</form>
+</form> -->
+
+<div class="login_wrap">
+  <form class="form_login">
+    <mat-form-field>
+      <input matInput placeholder="請輸入您的手機號碼" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="密碼" type="password" required />
+    </mat-form-field>
+
+
+    <mat-checkbox>下次自動登錄</mat-checkbox>
+
+    <button type="submit" mat-raised-button color="primary" class="btn_login">登入</button>
+  </form>
+</div>

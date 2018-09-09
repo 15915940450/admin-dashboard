@@ -1,7 +1,9 @@
 import _ from './lodash.ili.js';
 
 var api={
-    commerceInfo:'/statistics/commerceInfo__1'
+    commerceInfo:'/statistics/commerceInfo__1',
+
+    login:'/sys/user/login'
 };
 
 var hostname='console.immotor.com';

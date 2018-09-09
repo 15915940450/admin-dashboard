@@ -1,5 +1,33 @@
-.form_login{
-    background: #666;
-    color: blanchedalmond;
-    padding: 50px;
+.login_wrap{
+    width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,.1);
+    padding: 20px;
+    margin-top: calc(50vh - 135px);
+}
+
+
+.form_login {
+display: flex;
+flex-direction: column;
+}
+
+.form_login > * {
+width: 100%;
+}
+
+.form_login form {
+margin-bottom: 20px;
+}
+
+.form_login form > * {
+margin: 5px 0;
+}
+
+.form_login .mat-radio-button {
+margin: 0 5px;
+}
+
+.btn_login{
+    margin-top: 40px;
 }
